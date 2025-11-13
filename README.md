@@ -58,3 +58,14 @@ A React Native mobile application for chefs to build, manage, and showcase their
 3. Install dependencies:
    ```bash
    npm install
+### ai declaration 
+   I, Jordan Knipe , student number : st10494672  declare that the work submitted in this Practical Assessment / PoE is my own.
+
+Artificial intelligence tools, including ChatGPT, were used only to support tasks such as debugging, improving layout and UI, and understanding React Native concepts. They were not used to produce any part of the final submission.
+
+All coding, problem-solving, design decisions, and implementation were completed by me. Any AI guidance was adapted and incorporated by me to develop the final application.
+
+I accept full responsibility for the accuracy, integrity, and originality of this work.
+
+Name: JOrdan Knipe 
+Student Number: ST10494672
