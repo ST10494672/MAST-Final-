@@ -69,3 +69,18 @@ I accept full responsibility for the accuracy, integrity, and originality of thi
 
 Name: JOrdan Knipe 
 Student Number: ST10494672
+
+### 📚 References
+Freepik. (n.d.). Front view delicious cake with copy space [Photograph]. https://www.freepik.com/free-photo/front-view-delicious-cake-with-copy-space_23-2148769299.jpg
+
+iStock. (n.d.). Shrimp scampi [Photograph]. https://www.istockphoto.com/id/182033707/photo/shrimp-scampi.jpg
+
+iStock. (n.d.). Sliced grilled steak ribeye with herb butter [Photograph]. https://www.istockphoto.com/id/587207508/photo/sliced-grilled-steak-ribeye-with-herb-butter.jpg
+
+Flaticon. (n.d.). Food [Icon]. https://www.flaticon.com/free-icon/food_3075715
+
+Expo. (2025). Expo documentation. https://docs.expo.dev/
+
+React Native. (2025). React Native: A framework for building native apps using React. https://reactnative.dev/
+
+American Psychological Association. (2020). Publication manual of the American Psychological Association (7th ed.).
