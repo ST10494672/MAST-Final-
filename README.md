@@ -54,7 +54,7 @@ A React Native mobile application for chefs to build, manage, and showcase their
 
 ### Steps
 1. Clone or download this project
-2. Open your terminal in the project folder (e.g., `MYMASTAPP/`)
+2. Open your terminal in the project folder (e.g., `MAST-Final/`)
 3. Install dependencies:
    ```bash
    npm install
