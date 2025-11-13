@@ -1,4 +1,4 @@
-// App.tsx — Fully Functional, No Placeholders, Ready for PoE
+// App.tsx — Final Version: Grey Background + Preloaded Sample Menu
 import React, { useState } from 'react';
 import {
   View,
@@ -25,14 +25,42 @@ type MenuItem = {
 // Predefined courses
 const COURSES = ['Starters', 'Mains', 'Dessert'];
 
+// Sample menu items
+const SAMPLE_MENU: MenuItem[] = [
+  {
+    id: 'starter-1',
+    dishName: 'Garlic Butter Shrimp',
+    description: 'Juicy shrimp sautéed in garlic butter sauce.',
+    course: 'Starters',
+    price: '80',
+    image: 'https://media.istockphoto.com/id/182033707/photo/shrimp-scampi.jpg?s=612x612&w=0&k=20&c=sXCyAmVOIG9866CDbDdgxI_438eV2QHfakwDqqgxgzA=',
+  },
+  {
+    id: 'main-1',
+    dishName: 'Grilled Ribeye Steak',
+    description: 'Tender steak grilled to perfection with herbs and love.',
+    course: 'Mains',
+    price: '165',
+    image: 'https://media.istockphoto.com/id/587207508/photo/sliced-grilled-steak-ribeye-with-herb-butter.jpg?s=612x612&w=0&k=20&c=gm6Kg6rHYH0xWTF5oszm6NZ-hp9aPRbk9V1kvCr8MQI=',
+  },
+  {
+    id: 'dessert-1',
+    dishName: 'Chocolate Cake',
+    description: 'Warm chocolate cake with molten center and custard.',
+    course: 'Dessert',
+    price: '120',
+    image: 'https://img.freepik.com/free-photo/front-view-delicious-cake-with-copy-space_23-2148769299.jpg',
+  },
+];
+
 export default function App() {
-  // Main menu state
-  const [menuItems, setMenuItems] = useState<MenuItem[]>([]);
+  // Initialize with sample menu
+  const [menuItems, setMenuItems] = useState<MenuItem[]>(SAMPLE_MENU);
   
   // View state
   const [currentView, setCurrentView] = useState<'home' | 'admin' | 'filter'>('home');
   
-  // Filter state
+  // Filter state (for Filter screen only)
   const [selectedCourse, setSelectedCourse] = useState<string | null>(null);
   
   // Admin form state
@@ -113,17 +141,17 @@ export default function App() {
       <View style={styles.viewButtons}>
         <Button
           title="Home"
-          color={currentView === 'home' ? '#007AFF' : '#888'}
+          color={currentView === 'home' ? '#555' : '#888'}
           onPress={() => setCurrentView('home')}
         />
         <Button
           title="Admin"
-          color={currentView === 'admin' ? '#007AFF' : '#888'}
+          color={currentView === 'admin' ? '#555' : '#888'}
           onPress={() => setCurrentView('admin')}
         />
         <Button
           title="Filter"
-          color={currentView === 'filter' ? '#007AFF' : '#888'}
+          color={currentView === 'filter' ? '#555' : '#888'}
           onPress={() => setCurrentView('filter')}
         />
       </View>
@@ -186,7 +214,7 @@ export default function App() {
               {COURSES.map((c) => (
                 <Button
                   key={c}
-                  title={c}
+                  title={c.toUpperCase()}
                   color={course === c ? '#007AFF' : '#888'}
                   onPress={() => setCourse(c)}
                 />
@@ -210,7 +238,7 @@ export default function App() {
             </View>
           </View>
 
-          {/* Current Menu with Remove */}
+          {/* Current Menu */}
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>Current Menu ({menuItems.length} items)</Text>
             {menuItems.length === 0 ? (
@@ -237,7 +265,7 @@ export default function App() {
         </>
       )}
 
-      {/* ============== FILTER VIEW ============== */}
+      {/*  FILTER VIEW  */}
       {currentView === 'filter' && (
         <>
           <Text style={styles.title}>Filter Menu by Course</Text>
@@ -246,7 +274,7 @@ export default function App() {
             {COURSES.map((c) => (
               <Button
                 key={c}
-                title={c}
+                title={c.toUpperCase()}
                 color={selectedCourse === c ? '#007AFF' : '#888'}
                 onPress={() => setSelectedCourse(c)}
               />
@@ -284,12 +312,12 @@ export default function App() {
   );
 }
 
-// Styles
+// Styles — All backgrounds 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#f8f8f8',
+    backgroundColor: '#f8f8f8', // Light grey background 
   },
   viewButtons: {
     flexDirection: 'row',
@@ -305,7 +333,7 @@ const styles = StyleSheet.create({
     color: '#333',
   },
   statsContainer: {
-    backgroundColor: '#e8f4fd',
+    backgroundColor: '#e8e8e8', // Light grey 
     padding: 15,
     borderRadius: 8,
     marginBottom: 20,
@@ -313,7 +341,7 @@ const styles = StyleSheet.create({
   stat: {
     fontSize: 16,
     fontWeight: '500',
-    color: '#007AFF',
+    color: '#333', // Dark grey text 
     marginVertical: 4,
   },
   empty: {
@@ -353,7 +381,7 @@ const styles = StyleSheet.create({
   },
   course: {
     fontSize: 14,
-    color: '#007AFF',
+    color: '#333',
     fontWeight: '500',
     textAlign: 'center',
     marginVertical: 4,
